@@ -3,6 +3,7 @@ package efs.task.syntax;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+
 public class GuessNumberGame {
     private final int M;
     private final int L;
@@ -35,6 +36,7 @@ public class GuessNumberGame {
         this.L = (int) (Math.floor(Math.log(M) / Math.log(2)) + 1);
     }
 
+
     public void play() {
         //TODO: Implement the method that executes the game session
         Scanner scanner = new Scanner(System.in);
@@ -43,7 +45,7 @@ public class GuessNumberGame {
         String guess;
         String[] tab = new String[L];
         Arrays.fill(tab,".");
-        System.out.println("Zgadnij liczbe z zakresu <1," + M +">");
+        System.out.println("Zagrajmy. Zgadnij liczbe z zakresu <1," + M +">");
         while(true){
             if(trial == L){
                 System.out.println(UsefulConstants.UNFORTUNATELY + " nie udało Ci się zgadnąć liczby " + number);
